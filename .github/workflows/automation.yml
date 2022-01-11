@@ -1,5 +1,10 @@
 name: Outlook Covid Scraper
-on: [push]
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '0 */4 * * *'
 jobs:
   scrape:
     runs-on: macOS-11

@@ -9,7 +9,7 @@ jobs:
       - name: phantomjs
         run: |
           brew tap homebrew/cask
-          brew cask install phantomjs
+          brew install --cask phantomjs
       - name: r Packages
         run: Rscript -e 'install.packages(c("rvest", "janitor", "tidyverse", "lubridate", "xml2"))'
       - name: Run script

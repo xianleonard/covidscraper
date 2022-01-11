@@ -29,7 +29,7 @@ writeLines(sprintf("var page = require('webpage').create();
 page.open('%s', function () {
     console.log(page.content);
     phantom.exit();
-});", lacounty_covid), con="scrape.js")
+});", lacounty_covid), con="Output/scrape.js")
 
 system("/usr/local/bin/phantomjs scraper.js", timeout=30)
 
@@ -48,6 +48,8 @@ bur_glen$valid_thru <- str_sub(bur_glen$valid_thru, start=-10)
 bur_glen$valid_thru <- mdy(bur_glen$valid_thru)
 
 # Join with data
-covidmaster <- read_csv("covidmaster.csv")
-covidmaster <- merge(covidmaster, bur_glen, all=T)
-write_csv(covidmaster, "covidmaster.csv")
+covidmaster <- read_csv("Output/covidmaster.csv")
+covidmaster <- covidmaster %>% 
+  merge(bur_glen, all=T) %>% 
+  arrange(desc(valid_thru))
+write_csv(covidmaster, "Output/covidmaster.csv")

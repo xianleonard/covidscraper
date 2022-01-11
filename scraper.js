@@ -6,7 +6,7 @@ var fs = require('fs');
 
 // Specify source and path to output file
 var url  = 'http://publichealth.lacounty.gov/media/coronavirus/locations.htm'
-var path = 'lacountycovid.html'
+var path = 'Output/lacountycovid.html'
 
 page.open(url, function (status) {
   var content = page.content;

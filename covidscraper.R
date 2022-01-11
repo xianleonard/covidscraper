@@ -46,3 +46,8 @@ bur_glen$valid_thru <- date
 bur_glen$valid_thru <- str_sub(bur_glen$valid_thru, start=-10)
 ## as date
 bur_glen$valid_thru <- mdy(bur_glen$valid_thru)
+
+# Join with data
+covidmaster <- read_csv("covidmaster.csv")
+covidmaster <- merge(covidmaster, bur_glen, all=T)
+write_csv(covidmaster, "covidmaster.csv")

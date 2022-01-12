@@ -34,7 +34,7 @@ page.open('%s', function () {
 system("/usr/local/bin/phantomjs scraper.js", timeout=30)
 
 ## Import HTML result
-jsscrape <- read_html("lacountycovid.html")
+jsscrape <- read_html("Output/lacountycovid.html")
 date <- jsscrape %>% 
   html_elements(xpath="/html/body/div[2]/div[1]/div[1]/div[5]/div/p/span[2]") %>% 
   html_text2()

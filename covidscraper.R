@@ -25,11 +25,6 @@ bur_glen <- community_covid %>%
 
 # Get date
 ## Requires headless browser
-writeLines(sprintf("var page = require('webpage').create();
-page.open('%s', function () {
-    console.log(page.content);
-    phantom.exit();
-});", lacounty_covid), con="Output/scrape.js")
 
 system("/usr/local/bin/phantomjs scraper.js", timeout=30)
 

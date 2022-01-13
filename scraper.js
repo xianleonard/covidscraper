@@ -4,12 +4,8 @@ var page = require('webpage').create();
 // Include the File System module for writing to files
 var fs = require('fs');
 
-// Specify source and path to output file
-var url  = 'http://publichealth.lacounty.gov/media/coronavirus/locations.htm'
-var path = 'Output/lacountycovid.html'
-
-page.open(url, function (status) {
-  var content = page.content;
-  fs.write(path,content,'w')
+page.open('http://publichealth.lacounty.gov/media/coronavirus/locations.htm', function (status) {
+  var content = page.content; // Gets page HTML
+  fs.write('Output/lacountycovid.html',content,'w') // (Over)writes
   phantom.exit();
 });

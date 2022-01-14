@@ -48,3 +48,8 @@ covidmaster <- covidmaster %>%
   merge(bur_glen, all=T) %>% 
   arrange(desc(valid_thru))
 write_csv(covidmaster, "Output/covidmaster.csv")
+
+# Burbank only
+covidburbank <- covidmaster %>% 
+  filter(city_community=="City of Burbank")
+write_csv(covidburbank, "Output/covidburbank.csv")

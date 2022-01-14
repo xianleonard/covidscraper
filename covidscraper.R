@@ -4,6 +4,7 @@ library(janitor)
 library(tidyverse)
 library(xml2)
 library(lubridate)
+library(zoo)
 
 # Import website
 lacounty_covid <- read_html("http://publichealth.lacounty.gov/media/coronavirus/locations.htm")
@@ -52,4 +53,9 @@ write_csv(covidmaster, "Output/covidmaster.csv")
 # Burbank only
 covidburbank <- covidmaster %>% 
   filter(city_community=="City of Burbank")
+
+## Burbank analysis
+covidburbank <- covidburbank %>% 
+  mutate(new_cases = cases-lead(cases, n=1),
+         seven_day_avg = round(rollapply(new_cases, width=7, mean, fill=NA, align="left", na.rm=T), digits=1))
 write_csv(covidburbank, "Output/covidburbank.csv")

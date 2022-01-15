@@ -16,7 +16,7 @@ jobs:
           brew tap homebrew/cask
           brew install --cask phantomjs
       - name: r Packages
-        run: Rscript -e 'install.packages(c("rvest", "janitor", "tidyverse", "lubridate", "xml2", "zoo"))'
+        run: Rscript -e 'install.packages(c("rvest", "janitor", "broom", "tidyverse", "lubridate", "xml2", "zoo"))'
       - name: Run script
         run: Rscript covidscraper.R
       - name: Results

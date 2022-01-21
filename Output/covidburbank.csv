@@ -1,5 +1,6 @@
 city_community,cases,case_rate1,deaths,death_rate2,valid_thru,new_cases,seven_day_avg
-City of Burbank,18471,17234,275,257,2022-01-18,183,189
+City of Burbank,18471,17234,275,257,2022-01-18,-337,153.6
+City of Burbank,18808,17548,277,258,2022-01-18,520,237.1
 City of Burbank,18288,17063,274,256,2022-01-17,-183,208.3
 City of Burbank,18471,17234,275,257,2022-01-17,352,284.7
 City of Burbank,18119,16905,274,256,2022-01-16,215,277.1

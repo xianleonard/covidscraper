@@ -1,5 +1,6 @@
 city_community,cases,case_rate1,deaths,death_rate2,valid_thru,new_cases,seven_day_avg
-City of Burbank,22153,20669,320,299,2022-04-03,0,9.3
+City of Burbank,22153,20669,320,299,2022-04-03,-30,7.7
+City of Burbank,22183,20697,320,299,2022-04-03,30,13.6
 City of Burbank,22153,20669,320,299,2022-03-31,16,11.1
 City of Burbank,22137,20654,319,298,2022-03-30,9,11.6
 City of Burbank,22128,20646,317,296,2022-03-29,10,11.9

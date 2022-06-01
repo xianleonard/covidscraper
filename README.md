@@ -1,5 +1,7 @@
 # Outlook COVID Scraper
 
+**This project was discontinued and archived on June 1, 2022.**
+
 The Outlook News Group's COVID-19 case and death data scraper, which automatically scrapes the [Los Angeles County Department of Public Health website](http://publichealth.lacounty.gov/media/coronavirus/locations.htm) every hour and adds it to a CSV file. Currently, the automation only scrapes data for Glendale and Burbank cities.
 
 A separate CSV file containing minor analyses for the Burbank data (new cases tracker and a seven-day moving average) is also produced.
